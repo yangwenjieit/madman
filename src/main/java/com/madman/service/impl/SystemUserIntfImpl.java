@@ -17,6 +17,11 @@ public class SystemUserIntfImpl implements SystemUserIntf {
     }
 
     @Override
+    public void insert(SystemUser systemUser) {
+
+    }
+
+    @Override
     public List<SystemUser> getAllSystemUser() {
         return systemUserDao.getAllSystemUser();
     }
