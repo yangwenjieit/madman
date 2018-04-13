@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 public class SystemUserServiceTest extends SpringTestCase {
@@ -22,5 +23,15 @@ public class SystemUserServiceTest extends SpringTestCase {
             logger.info("sss"+s.getUserName());
         }
     }
-
+    @Test
+    public void insert(){
+        SystemUser systemUser = new SystemUser();
+        systemUser.setPassword("123123");
+        systemUser.setUserCode("lisi");
+        systemUser.setUserName("李四");
+        systemUser.setPassword("12311111111");
+        systemUser.setCreateTime(new Date());
+        systemUserIntf.insert(systemUser);
+        logger.info("添加成功------------");
+    }
 }
