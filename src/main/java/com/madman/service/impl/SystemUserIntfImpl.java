@@ -18,7 +18,7 @@ public class SystemUserIntfImpl implements SystemUserIntf {
 
     @Override
     public void insert(SystemUser systemUser) {
-
+        systemUserDao.insert(systemUser);
     }
 
     @Override

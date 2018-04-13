@@ -20,3 +20,7 @@ mybatis:
 logging:
   level:
     root: info
+server:
+  port: 8084
+  servlet:
+    context-path: /madman

@@ -7,6 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface SystemUserDao {
+    public void insert(SystemUser systemUser);
     public List<SystemUser> getAllSystemUser();
     public SystemUser getSystemUserById(String id);
 }

@@ -16,6 +16,10 @@
     id, user_name, user_code, password, phone,
     create_time, update_time
   </sql>
+    <insert id="insert" parameterType="com.madman.entity.SystemUser">
+      insert into t_system_user(id, user_name, user_code, password, phone,
+    create_time, update_time)values (#{id},#{userName},#{userCode},#{password},#{phone},#{createTime},#{updateTime})
+    </insert>
 <!-- 查询单条记录 -->
 <select id="selectUserById" parameterType="java.lang.String" resultMap="BaseResultMap">
     SELECT <include refid="Base_Column_List"/>
